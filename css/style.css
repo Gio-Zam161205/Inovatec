@@ -1,0 +1,206 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+main {
+  flex: 1;
+}
+
+.section {
+  display: none;
+}
+/* Mostrar la sección activa */
+.active {
+  display: block;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  background-color: #059bbf;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 45px;
+  margin-right: 30px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  font-size: 0.9em;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+  transition: transform 0.2s ease;
+}
+
+.nav-icon-container:hover .nav-icon {
+  transform: scale(1.2);
+}
+
+/* Buscador */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 60%;
+  border: 2px solid black;
+  border-radius: 40px;
+  background-color: #00a6cb;
+  padding: 10px 20px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: none;
+  color: black;
+  font-size: 1.2em;
+  width: 90%;
+  margin-left: 10px;
+}
+
+/* Tarjetas */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin-top: 15px;
+}
+
+
+ /* Sección Calculadora */
+ .seccion {
+  display: none;
+  padding: 20px;
+}
+.visible {
+  display: block;
+}
+.calculadora {
+  max-width: 300px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.calculadora input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: right;
+}
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.teclado button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.teclado button:hover {
+  background-color: #2980b9;
+}
+
+/* Footer al fondo */
+footer {
+  background-color: #059bbf;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar {
+    width: 90%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-icons {
+    justify-content: center;
+  }
+}

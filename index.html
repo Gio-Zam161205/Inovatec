@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Matelabc - Proyecto Inovatec</title>
+</head>
+<body>
+
+  <header>
+    <img src="img/matelabc.png" alt="Nombre de la página" class="logo">
+
+    <div class="nav-icons">
+      <div class="nav-icon-container" onclick="showSection('search')">
+        <img src="img/search-alt-2-svgrepo-com.svg" class="nav-icon" alt="Búsqueda">
+        <span>Búsqueda</span>
+      </div>
+      <div class="nav-icon-container" onclick="showSection('calculator')">
+        <img src="img/calculator-svgrepo-com.svg" class="nav-icon" alt="Calculadora">
+        <span>Calculadora</span>
+      </div>
+      <div class="nav-icon-container" onclick="showSection('graphics')">
+        <img src="img/graph1-svgrepo-com.svg" class="nav-icon" alt="Gráficos">
+        <span>Gráficos</span>
+      </div>
+      <div class="nav-icon-container" onclick="showSection('geometry')">
+        <img src="img/compass-drafting-svgrepo-com.svg" class="nav-icon" alt="Geometría">
+        <span>Geometría</span>
+      </div>
+      <div class="nav-icon-container" onclick="showSection('academic')">
+        <img src="img/graduation-cap-svgrepo-com.svg" class="nav-icon" alt="Guía Académica">
+        <span>Guía Académica</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main>
+   <!-- Sección Búsqueda (por defecto activa) -->
+    <div id="search" class="section active">
+      <!-- Buscador -->
+      <div class="search-bar">
+      <img src="img/search-alt-2-svgrepo-com.svg" style="width: 24px;" alt="Buscar">
+      <input type="text" placeholder="Buscar...">
+    </div>
+
+    <!-- Secciones de tarjetas -->
+    <div class="cards">
+      <div class="card">
+        <img src="img/aprende.jpg" alt="Aprende">
+        <h3>Aprende</h3>
+      </div>
+      <div class="card">
+        <img src="img/consulta.jpg" alt="Consulta">
+        <h3>Consulta</h3>
+      </div>
+      <div class="card">
+        <img src="img/soluciona.jpg" alt="Soluciona">
+        <h3>Soluciona</h3>
+      </div>
+    </div>
+  </div>
+
+    <!-- Sección Calculadora -->
+    <div id="calculator" class="section">
+      <h2>Calculadora</h2>
+      <p>Aquí va el contenido de la calculadora...</p>
+    </div>
+
+    <!-- Sección Gráficos -->
+    <div id="graphics" class="section">
+      <h2>Gráficos</h2>
+      <p>Aquí va el contenido de gráficos...</p>
+    </div>
+
+    <!-- Sección Geometría -->
+    <div id="geometry" class="section">
+      <h2>Geometría</h2>
+      <p>Aquí va el contenido de geometría...</p>
+    </div>
+
+    <!-- Sección Guía Académica -->
+    <div id="academic" class="section">
+      <h2>Guía Académica</h2>
+      <p>Aquí va el contenido de la guía académica...</p>
+    </div>
+  </main>
+  <!-- Footer fijo al fondo -->
+  <footer>
+    <div class="footer-container">
+      <img src="img/matelab.png" alt="Logo Matelab" class="footer-logo">
+      <p>&copy; 2025 Matelabc. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="#">Términos</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
