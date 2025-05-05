@@ -109,48 +109,86 @@ header {
 }
 
 
- /* Sección Calculadora */
- .seccion {
-  display: none;
+ /* === Sección Calculadora === */
+#calculator {
+  background: #f9f9f9;
   padding: 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
 }
-.visible {
-  display: block;
-}
-.calculadora {
-  max-width: 300px;
-  margin: 20px auto;
+
+.toolbar {
   background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-.calculadora input[type="text"] {
-  width: 100%;
+  border: 1px solid #ddd;
   padding: 15px;
-  font-size: 20px;
+  border-radius: 6px;
   margin-bottom: 15px;
+}
+
+.math-buttons,
+.toolbar-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.math-buttons button,
+.toolbar-buttons button {
+  padding: 6px 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: right;
-}
-.teclado {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-.teclado button {
-  padding: 15px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  background-color: #3498db;
-  color: white;
+  background: #fff;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background 0.2s;
+  font-size: 14px;
 }
-.teclado button:hover {
-  background-color: #2980b9;
+
+.math-buttons button:hover,
+.toolbar-buttons button:hover {
+  background: #f0f0f0;
+}
+
+.input-area {
+  display: flex;
+  margin-top: 10px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.camera-btn {
+  padding: 8px 12px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-btn:hover {
+  background: #ddd;
+}
+
+.camera-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.examples {
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #eee;
 }
 
 /* Footer al fondo */
