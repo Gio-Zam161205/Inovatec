@@ -245,34 +245,42 @@ header {
   color: white;
 }
 
-.toolbar, .options {
-  margin-top: 10px;
+.toolbar {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 0.5rem;
+  margin: 10px 0;
 }
 
-.input-area {
-  margin-top: 10px;
-  display: flex;
-  gap: 5px;
+.toolbar button {
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.toolbar button:hover {
+  background-color: #e0e0e0;
+}
+
+.btn.teal {
+  background-color: #009688;
+  color: white;
+}
+
+.btn.teal:hover {
+  background-color: #00796b;
 }
 
 .input-area input {
   flex: 1;
-  padding: 5px;
-  font-style: italic;
-}
-
-.shape-buttons {
-  margin-bottom: 20px;
-}
-
-.shape-buttons button {
-  margin: 5px;
-  background-color: #cce6ff;
-  border: 1px solid #99ccff;
-  padding: 5px 10px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
 
 /* Contenedor del personaje */
@@ -479,5 +487,87 @@ footer {
 
   .nav-icons {
     justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .geometry-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+
+  .right-panel {
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toolbar,
+  .options,
+  .input-area {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .input-area input {
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 8px;
+  }
+
+  .shape-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .shape-buttons button {
+    width: 45%;
+    font-size: 0.9em;
+  }
+
+  .character {
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+  }
+
+  .leg {
+    height: 20px;
+  }
+
+  .eye {
+    width: 6px;
+    height: 6px;
+  }
+
+  .smile {
+    width: 20px;
+    height: 10px;
+  }
+
+  .message {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
   }
 }
