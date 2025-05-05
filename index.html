@@ -62,17 +62,64 @@
     </div>
   </div>
 
-    <!-- Sección Calculadora -->
-    <div id="calculator" class="section">
-      <h2>Calculadora</h2>
-      <p>Aquí va el contenido de la calculadora...</p>
+  <!-- Sección Calculadora -->
+  <div id="calculator" class="section">
+    <h2>Calculadora paso por paso</h2>
+  
+    <div class="toolbar">
+      <div class="math-buttons">
+        <button>x²</button>
+        <button>x^</button>
+        <button>log</button>
+        <button>√</button>
+        <button>□√</button>
+        <button>≤</button>
+        <button>≥</button>
+        <button>÷</button>
+        <button>xⁿ</button>
+        <button>π</button>
+        <button>(□)</button>
+        <button>d/dx</button>
+        <button>∂/∂x</button>
+        <button>∫</button>
+        <button>∮</button>
+        <button>lim</button>
+        <button>∑</button>
+        <button>∞</button>
+        <button>θ</button>
+        <button>(f∘g)</button>
+        <button>f(x)</button>
+      </div>
+
+      <div class="toolbar-buttons">
+        <button>simplificar</button>
+        <button>resolver para</button>
+        <button>inversa</button>
+        <button>tangente</button>
+        <button>línea</button>
+        <button>Ver todo</button>
+      </div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" placeholder="Ingrese un problema" />
+        <button class="camera-btn">
+        <img src="img/camera-svgrepo-com.svg" alt="Cámara" class="camera-icon">
+      </button>
+    </div>
+
+    <div class="examples">
+        <p><strong>Ejemplos</strong></p>
+        <p><code>x² − x − 6 = 0</code></p>
+      </div>
     </div>
 
     <!-- Sección Gráficos -->
     <div id="graphics" class="section">
-      <h2>Gráficos</h2>
-      <p>Aquí va el contenido de gráficos...</p>
+      <h2>Calculadora Gráfica</h2>
+      <div id="graphing-calculator" style="width: 100%; height: 500px;"></div>
     </div>
+
 
     <!-- Sección Geometría -->
     <div id="geometry" class="section">
@@ -99,5 +146,30 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+ <!-- Librería Desmos -->
+<script src="https://www.desmos.com/api/v1.6/calculator.js?apiKey=default"></script>
+
+<!-- Script que la usa -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const graphicsSection = document.getElementById('graphics');
+
+    const observer = new MutationObserver(function () {
+      if (graphicsSection.classList.contains('active')) {
+        const calcContainer = document.getElementById('graphing-calculator');
+        if (!calcContainer.dataset.loaded) {
+          Desmos.GraphingCalculator(calcContainer, {
+            expressions: true,
+            settingsMenu: true,
+            zoomButtons: true
+          });
+          calcContainer.dataset.loaded = "true";
+        }
+      }
+    });
+
+    observer.observe(graphicsSection, { attributes: true });
+  });
+</script>
 </body>
 </html>
