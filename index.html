@@ -130,24 +130,49 @@
           <div class="left-panel">
             <div class="top-bar">
               <h3>Sin título</h3>
-              <div>
+              <div class="toolbar">
                 <button class="btn teal">Guardar diagrama</button>
                 <button class="btn teal">Ejemplos</button>
               </div>
             </div>
+
             <div class="toolbar">
-              <button>α</button><button>β</button><button>γ</button><button>θ</button><button>π</button>
-              <button>=</button><button>x²</button><button>√</button><button>□</button>
+              <div class="math-buttons">
+                <button>x²</button>
+                <button>x^</button>
+                <button>log</button>
+                <button>√</button>
+                <button>□√</button>
+                <button>≤</button>
+                <button>≥</button>
+                <button>÷</button>
+                <button>xⁿ</button>
+                <button>π</button>
+                <button>(□)</button>
+                <button>d/dx</button>
+                <button>∂/∂x</button>
+                <button>∫</button>
+                <button>∮</button>
+                <button>lim</button>
+                <button>∑</button>
+                <button>∞</button>
+                <button>θ</button>
+                <button>(f∘g)</button>
+                <button>f(x)</button>
+              </div>
             </div>
-            <div class="options">
+
+            <div class="toolbar">
               <button class="btn teal">Si tenemos</button>
               <button class="btn">Demostrar</button>
               <button class="btn">Buscar</button>
             </div>
-            <div class="input-area">
+
+            <div class="toolbar input-area">
               <input type="text" placeholder="Ingresar datos">
               <button class="btn teal">✔</button>
             </div>
+
             <p>Si tenemos:</p>
           </div>
 
@@ -231,10 +256,11 @@
      });
  </script>
   <script>
-    function sayMotivation() {
+      function sayMotivation() {
       const text = document.getElementById("motivationText");
-      text.textContent = "¡Tú puedes!";
-      setTimeout(() => text.textContent = "¡Creemos algo nuevo!", 2000);
+      const phrases = ["¡Tú puedes!", "¡Vamos!", "¡Sigue adelante!", "¡Eres genial!", "¡Buen trabajo!"];
+      const random = phrases[Math.floor(Math.random() * phrases.length)];
+      text.textContent = random;
     }
   </script>
  </body>
